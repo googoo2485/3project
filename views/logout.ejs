@@ -1,0 +1,227 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        Logout
+    </title>
+
+    <body>
+        <h1>
+            <%= id %>
+        </h1>
+        <h1>Nice to meet you
+        </h1>
+        <form action="/logout" method="POST">
+            <button type="submit">Logout</button>
+        </form>
+    </body>
+    <h1>
+       
+        <link type="text/css" rel="stylesheet" href="stylesheet.css" />
+    </h1>
+    <style>
+        body {
+            background-color: cornsilk;
+        }
+        
+        table {
+            border-collapse: collapse;
+        }
+        
+        td {
+            background-color: lightgreen;
+            padding: 20px 105px;
+        }
+        
+        input {
+            text-align: right;
+            border: none;
+        }
+        
+        input:focus {
+            outline: none;
+        }
+        
+        .button {
+            background-color: greenyellow;
+            padding: 20px 40px;
+            border-radius: 5px;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        
+        .button:hover {
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            background: tomato;
+            color: white;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+    </style>
+</head>
+
+<body>
+    <>
+        <table border="1">
+            <tr>
+                <td colspan="10">
+                    <input type="text" id="display">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="10">
+                    <input type="text" id="result">
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <button class="button " style="width: 205pt; height: 47pt; " onclick="reset() ">AC</button>
+                <button class="button " onclick="cal('/') ">/</button>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <button class="button " onclick="sin()" style="width: 90pt;">Sin</button>
+                <button class=" button " onclick="cos()" style="width: 90pt;">Cos</button>
+                <button class="button " onclick="tan()" style="width: 90pt;">Tan</button>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <button class="button " onclick="abs()" style="width: 90pt;">Abs</button>
+                <button class=" button " onclick="pow()" style="width: 90pt;">Pow</button>
+                <button class="button " onclick="log()" style="width: 90pt;">Log</button>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <button class="button " onclick="asin()" style="width: 90pt;">Asn</button>
+                <button class=" button " onclick="acos()" style="width: 90pt;">Aco</button>
+                <button class="button " onclick="atan()" style="width: 90pt;">Ata</button>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <button class="button " onclick="cal(7) ">7</button>
+                <button class="button " onclick="cal(8) ">8</button>
+                <button class="button " onclick="cal(9) ">9</button>
+                <button class="button " onclick="cal('*') ">x</button>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <button class="button " onclick="cal(4) ">4</button>
+                <button class="button " onclick="cal(5) ">5</button>
+                <button class="button " onclick="cal(6) ">6</button>
+                <button class="button " onclick="cal( '-') ">-</button>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <button class="button " onclick="cal(1) ">1</button>
+                <button class="button " onclick="cal(2) ">2</button>
+                <button class="button " onclick="cal(3) ">3</button>
+                <button class="button " onclick="cal( '+') ">+</button>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <button class="button " style="width: 140pt; height: 47pt; " onclick="cal(0) ">0</button>
+                <button class="button " onclick="cal( '.') ">.</button>
+                <button class="button " onclick="resultCal() ">=</button>
+            </tr>
+        </table>
+
+        <script>
+            function asin() {
+                var display = document.getElementById('display');
+                var result = Math.asin(display.value);
+                document.getElementById('result').value = result;
+                display.value = result;
+            }
+
+            function acos() {
+                var display = document.getElementById('display');
+                var result = Math.acos(display.value);
+                document.getElementById('result').value = result;
+                display.value = result;
+            }
+
+            function atan() {
+                var display = document.getElementById('display');
+                var result = Math.atan(display.value);
+                document.getElementById('result').value = result;
+                display.value = result;
+            }
+
+            function log() {
+                var display = document.getElementById('display');
+                var result = Math.log(display.value);
+                document.getElementById('result').value = result;
+                display.value = result;
+            }
+
+            function pow() {
+                var display = document.getElementById('display');
+                var result = display.value * display.value;
+                document.getElementById('result').value = result;
+                display.value = result;
+            }
+
+            function abs() {
+                var display = document.getElementById('display');
+                var result = Math.abs(display.value);
+                document.getElementById('result').value = result;
+                display.value = result;
+            }
+
+            function del() {
+                display.result.value =
+                    display.result.value.substring(0, display.result.value.length - 1);
+            }
+
+            function sin() {
+                var display = document.getElementById('display');
+                var result = Math.sin((display.value * 3.14159265359) / 180)
+                document.getElementById('result').value = result;
+                display.value = result;
+            }
+
+            function cos() {
+                var display = document.getElementById('display');
+                var result = Math.cos((display.value * 3.14159265359) / 180)
+                document.getElementById('result').value = result;
+                display.value = result;
+            }
+
+            function tan() {
+                var display = document.getElementById('display');
+                var result = Math.tan((display.value * 3.14159265359) / 180)
+                document.getElementById('result').value = result;
+                display.value = result;
+            }
+
+            function cal(char) {
+                var display = document.getElementById('display');
+                display.value = display.value + char;
+            }
+
+            function resultCal(char) {
+                var display = document.getElementById('display');
+                var result = eval(display.value);
+                document.getElementById('result').value = result;
+                document.getElementById('display').value = " ";
+                display.value = result;
+            }
+
+            function reset() {
+                document.getElementById('display').value = " ";
+                document.getElementById('result').value = " ";
+            }
+        </script>
+    
+</body>
+</head>
+
+</html>

@@ -1,0 +1,205 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-family: "NanumGothic-Bold";
+  text-decoration: none;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  height:100%;
+}
+a:visited { 
+  color: #ffffff; }
+@font-face{
+  font-family: "NanumGothic-Bold";
+  src: url("/font/NanumGothic-Bold.ttf")format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+.logo{
+  width: 100px;
+  height: 30px;
+}
+.header{
+  display: grid;
+  color: black;
+  grid-template-columns: repeat(25,1fr);
+  grid-template-rows: repeat(4,1fr);
+  gap: 1px;
+}
+.container{
+  width: 100%;
+  height: 850px;
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  grid-template-rows: repeat(70,1fr);   
+  grid-auto-rows: 100px;
+  grid-auto-columns: 100px;
+}
+.backimg{
+  background-size:cover;
+  background-image: url(/images/main/header.jpg);
+  background-repeat: no-repeat;
+  background-position:center;
+  z-index: -999;
+  grid-row-start: 1;
+  grid-row-end: 71;
+  grid-column-start: 1;
+  grid-column-end: 11;
+}
+.backimg2{
+  background-size: 100% 100%;
+  background-color: black;
+  opacity: 0.2;
+  grid-row-start: 1;
+  grid-row-end: 71;
+  grid-column-start: 1;
+  grid-column-end: 11;
+  z-index: -998;
+}
+.searchBox{
+  grid-row-start: 5;
+  grid-row-end: 5;
+  grid-column-start: 5;
+  grid-column-end: 5;
+  border-radius: 999px;
+  border:1px solid #ffffff;
+  background-color: #ffffff;
+  padding: 12px 45px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  z-index: 999;
+  color:#ffffff;
+  width: 650px;
+  height: 60px;
+  display: flex;
+}
+
+
+
+.select{
+  border-color: #ffffff;
+  background-color: #ffffff;
+  border:none;
+  font-size: 17px;
+  z-index: 500;
+  width: 100%;
+}
+
+.search{
+  padding: 0px 14px;
+  font-size: 25px;
+  z-index: 30;
+}
+
+.Hbox{
+  grid-column-start: 9;
+  grid-column-end: 11;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  display: flex;
+  text-align: left;
+  font-size: 18px;
+  z-index: 300;
+}
+.Hbox li{
+  padding: 14px 16px;
+}
+.Hbox input{
+  grid-column-start: 20;
+  grid-column-end: 22;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  border-radius: 15px;
+}
+
+.subMenu{
+  width: 141;
+  height: 166;
+  box-sizing: border-box;
+  background: white;
+  grid-column-start: 9;
+  grid-column-end: 10;
+  grid-row-start: 2;
+  grid-row-end: 9;
+  border-radius: 5px;
+  text-align: center;
+
+
+}
+.subMenu li{
+ 
+  opacity: 1;
+  font-size: 12px;
+  color: black;
+  padding: 14px 18px;
+ 
+}
+.subMenu a{
+  color: black;
+  text-align: center;
+}
+.subMenu{
+  display: none;
+}
+
+
+
+.menu{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  transform: (-50%,-50%);
+  text-decoration: none;
+}
+
+.menu span{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 3px;
+  background: rgb(255, 255, 255);
+  color:transparent;
+  transform:translate(0,-50%);
+  transition: all 0.5s;
+}
+
+.menu span:before,.menu span:after{
+  content: "";
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 3px;
+  background: rgb(255, 255, 255);
+  transition:  all 0.5s;
+}
+.menu span:before{
+  top:-6px;
+}
+.menu span:after{
+  top:6px;
+}
+.menu.on span{
+  background: rgba(0, 0, 0, 0);
+}
+.menu.on span:before{
+  top: 0px; transform: rotate(45deg);
+}
+.menu.on span:after{
+  top: 0px; transform: rotate(-45deg);
+}
+
+.body{
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  grid-template-rows: repeat(70,1fr);
+  grid-auto-rows: minmax(400px,auto);
+  grid-auto-columns: minmax(400px,auto);
+  gap: 100px;
+}
+
