@@ -6,4 +6,9 @@ const client = mysql.createConnection({
     database: 'tkdrn2485',
     port: '3306',
 });
+
+
+
+
+
 module.exports = client;
