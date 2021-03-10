@@ -1,15 +1,15 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const session = require('express-session');
+const indexRouter = require('./routes/index');
+const registerRouter = require('./routes/register');
+const loginRouter = require('./routes/login');
+const myPageRouter = require('./routes/myPage');
 
-var indexRouter = require('./routes/index');
-var registerRouter = require('./routes/register');
-var loginRouter = require('./routes/login');
-var myPageRouter = require('./routes/myPage');
-
-var app = express();
+let app = express();
 
 
 
@@ -19,7 +19,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 
-app.use(session({  // 2
+app.use(session({ 
   secret: 'keyboard cat',  // 암호화
   resave: false,
   saveUninitialized: true,
