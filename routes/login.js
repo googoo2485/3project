@@ -22,8 +22,9 @@ router.get("/", function(req,res){
 
 
 client.connect();
-let sql = 'SELECT * FROM user WHERE id = ?';
-client.query(sql,(req,res)=>{
-
+router.post('/',(res,req)=>{
+  body = res.body;
+  sql = "SELECT * FROM user where id=?";
+  client.query(sql,)
 })
 module.exports = router;
