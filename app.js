@@ -36,8 +36,8 @@ app.use('/register', registerRouter);
 app.use('/login', loginRouter);
 app.use('/myPage', myPageRouter);
 
-app.post('/register',registerRouter);
-app.post('/login',loginRouter);
+// app.post('/register',registerRouter);
+// app.post('/login',loginRouter);
 
 
 // catch 404 and forward to error handler

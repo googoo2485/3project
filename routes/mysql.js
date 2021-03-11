@@ -1,4 +1,4 @@
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const client = mysql.createConnection({
     host: 'sanggoo2485.cafe24app.com',
     user: 'tkdrn2485',
