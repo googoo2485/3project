@@ -27,7 +27,7 @@ router.get('/', function(req, res, next) {
 // client.query(sql,(req,res)=>{
 // })
 
-router.get('/', function (req, res) {
+router.get('/register', function (req, res) {
   var body = req.body;
   console.log(body);
 
