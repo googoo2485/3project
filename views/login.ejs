@@ -10,14 +10,14 @@
 <body>
     <h1>Login Page</h1>
     <table>
-        <form action="/" method="POST">
-            <input id="user_id" name="user_id" type="text" pleaceholder="ID">
+        <form action="/login" method="POST">
+            <input id="user_id" name="id" type="text" pleaceholder="ID">
             <br />
-            <input id="password" name="password" type="password" placeholder="Password">
+            <input id="password" name="pw" type="password" placeholder="Password">
             <br />
             <button type="submit ">로그인</button>
         </form>
-        <form action="/regist" method="POST">
+        <form action="/register" method="POST">
             <button type="submit">회원가입</button>
         </form>
         <form action="/findID" method="POST">

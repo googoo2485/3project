@@ -8,7 +8,7 @@ const indexRouter = require('./routes/index');
 const registerRouter = require('./routes/register');
 const loginRouter = require('./routes/login');
 const myPageRouter = require('./routes/myPage');
-
+const logOutRouter = require('./routes/logOut');
 let app = express();
 
 
@@ -19,11 +19,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 
-app.use(session({ 
-  secret: 'keyboard cat',  // 암호화
-  resave: false,
-  saveUninitialized: true,
-}));
+
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -34,8 +30,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.get('/register',(req,res)=>{
 
 // })
-
 app.use('/', indexRouter);
+app.use('/logOut',logOutRouter);
 app.use('/register', registerRouter);
 app.use('/login', loginRouter);
 app.use('/myPage', myPageRouter);

@@ -26,9 +26,13 @@
         <li><a href="#a"class="menu"><span>메뉴</span></a></li>
     </ul>
     <ul class="subMenu">
-        <li><a href="/register">회원가입</a></li>
-        <li><a href="/login" >로그인</a></li>
-        <li><a href="/myPage">마이페이지</a></li>
+        <%if(data==undefined){%>
+            <li><a href="/register">회원가입</a></li>
+            <li><a href="/login" >로그인</a></li>
+        <%}else{%>
+            <li><a href="/myPage">마이페이지</a></li>
+            <li><a href="/logOut">로그아웃</a></li>
+        <%}%>
     </ul>
 </div>
     <div class="body"></div>
