@@ -30,8 +30,7 @@ router.get('/', function(req, res, next) {
 router.post('/', function (req, res) {
   var body = req.body;
   console.log(body);
-  var sql = 'INSERT INTO user VALUES(?, ?, ?,NOW())';
-  var params = [body.id ,body.pw ,body.email ,body.created];
+  var sql = 'INSERT INTO user (id,pw,email,created) VALUES(?, ?, ?,NOW())';
   console.log(sql);
   client.query(sql,[body.id ,body.pw ,body.email ,body.created],()=>{
     console.log('????')
