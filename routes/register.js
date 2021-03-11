@@ -31,8 +31,8 @@ router.get('/', function (req, res) {
   var body = req.body;
   console.log(body);
 
-  var sql = 'INSERT INTO user VALUES(?, ?, ?, ?,NOW())';
-  var params = [body.id, body.pw, body.name,body.email,body.created];
+  var sql = 'INSERT INTO user VALUES(?, ?, ?,NOW())';
+  var params = [body.id, body.pw,body.email,body.created];
   console.log(sql);
   conn.query(sql, params);
 });
