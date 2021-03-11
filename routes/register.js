@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
 //     "created":req.body.created
 //   }
 // }
-client.connect();
+//client.connect();
 // let sql = "INSERT INTO user(id,pw,name,email,created)VALUSES(?,?,?,?,?)";
 // client.query(sql,(req,res)=>{
 // })
