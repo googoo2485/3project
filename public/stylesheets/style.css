@@ -117,11 +117,9 @@ a:visited {
   border-radius: 15px;
 }
 
-.subMenu{
-  width: 141;
-  height: 166;
+.dropdown{
+  position: relative;
   box-sizing: border-box;
-  background: white;
   grid-column-start: 9;
   grid-column-end: 10;
   grid-row-start: 2;
@@ -129,20 +127,29 @@ a:visited {
   border-radius: 5px;
   text-align: center;
 
+  display: inline-block;
 
 }
-.subMenu li{
+.dropdown-content{
  
-  opacity: 1;
-  font-size: 12px;
-  color: black;
-  padding: 14px 18px;
- 
+  display: none;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
 }
-.subMenu a{
+.dropdown-content a {
   color: black;
-  text-align: center;
+  padding: 12px 16px; 
+  text-decoration: none;
+  display: block;
 }
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 
 

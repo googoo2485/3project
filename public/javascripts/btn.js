@@ -5,6 +5,3 @@ $(document).ready(function(){
 });
 
 
-$(".container .Hbox").hover(function(){
-    $(this).find("li").fadeToggle();
-});

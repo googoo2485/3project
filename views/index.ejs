@@ -22,18 +22,23 @@
     </div>
     <ul class="Hbox" id="user">
         <li><a href="./"><span><i class="fas fa-search"></i></span></a></li>
-        <li class="user"><a href="./" ><span><i class="far fa-user"></i></span></a></li>       
+        <li class="dropdown">
+            <div class="dropdown-content">
+                <%if(data==undefined){%>
+                    <a href="/register">회원가입</a>
+                    <a href="/login" >로그인</a>
+                <%}else{%>
+                    <a href="/myPage">마이페이지</a>
+                    <a href="/logOut">로그아웃</a>
+                <%}%>
+            </div>
+            <a href="./" >
+            <i class="far fa-user"></i>
+           
+        </a></li>       
         <li><a href="#a"class="menu"><span>메뉴</span></a></li>
     </ul>
-    <ul class="subMenu">
-        <%if(data==undefined){%>
-            <li><a href="/register">회원가입</a></li>
-            <li><a href="/login" >로그인</a></li>
-        <%}else{%>
-            <li><a href="/myPage">마이페이지</a></li>
-            <li><a href="/logOut">로그아웃</a></li>
-        <%}%>
-    </ul>
+    
 </div>
     <div class="body"></div>
     <div class="footer"></div>
