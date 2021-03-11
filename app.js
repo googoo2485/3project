@@ -31,10 +31,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// app.get('/register',(req,res)=>{
+
+// })
+
 app.use('/', indexRouter);
 app.use('/register', registerRouter);
 app.use('/login', loginRouter);
 app.use('/myPage', myPageRouter);
+
+
+
 
 // app.post('/register',registerRouter);
 // app.post('/login',loginRouter);

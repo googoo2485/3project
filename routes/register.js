@@ -27,14 +27,16 @@ router.get('/', function(req, res, next) {
 // client.query(sql,(req,res)=>{
 // })
 
-router.get('/register', function (req, res) {
+router.post('/', function (req, res) {
   var body = req.body;
   console.log(body);
-
   var sql = 'INSERT INTO user VALUES(?, ?, ?,NOW())';
   var params = [body.id ,body.pw ,body.email ,body.created];
   console.log(sql);
-  client.query(sql,params);
+  client.query(sql,[body.id ,body.pw ,body.email ,body.created],()=>{
+    console.log('????')
+    res.render('index');
+  });
 });
 
 module.exports = router;
