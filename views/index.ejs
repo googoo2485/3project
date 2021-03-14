@@ -11,35 +11,44 @@
 </head>
 <body>
 <div class="header">
-    <div class="logo"></div>
 </div>
 <div class="container">
     <div class="backimg"></div>
     <div class="backimg2"></div>
+    <div class="navbar">
+        <div class="logo"><img src="images/main/TodayRecipelogo.png" alt=""></div>
+        <div class="headerUi">
+            <ul class="headerUi2">
+                <li><a href="#">레시피</a></li>
+                <li><a href="#">랭킹</a></li>
+                <li><a href="#">분류</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </div>
+        <ul class="Hbox" id="user">
+            <li><a href="./"><span><i class="fas fa-search"></i></span></a></li>
+            <li class="dropdown">
+                <div class="dropdown-content">
+                    <%if(data==undefined){%>
+                        <a href="/register">회원가입
+                        <div class="menuhover"></div></a>
+                        <a href="/login" >로그인
+                        <div class="menuhover"></div></a>
+                    <%}else{%>
+                        <a href="/myPage">마이페이지</a>
+                        <a href="/logOut">로그아웃</a>
+                    <%}%>
+                </div>
+                <a href="./" >
+                <i class="far fa-user"></i>           
+            </a></li>       
+            <li><a href="#a"class="menu"><span>메뉴</span></a></li>
+        </ul>
+    </div>
     <div class="searchBox">
         <input type="text" class="select" placeholder="레시피 검색">
         <a class="search" href="./"><i class="fas fa-search"></i></a>
     </div>
-    <ul class="Hbox" id="user">
-        <li><a href="./"><span><i class="fas fa-search"></i></span></a></li>
-        <li class="dropdown">
-            <div class="dropdown-content">
-                <%if(data==undefined){%>
-                    <a href="/register">회원가입
-                    <div class="menuhover"></div></a>
-                    <a href="/login" >로그인
-                    <div class="menuhover"></div></a>
-                <%}else{%>
-                    <a href="/myPage">마이페이지</a>
-                    <a href="/logOut">로그아웃</a>
-                <%}%>
-            </div>
-            <a href="./" >
-            <i class="far fa-user"></i>
-           
-        </a></li>       
-        <li><a href="#a"class="menu"><span>메뉴</span></a></li>
-    </ul>
     <div class="headerFont">ALL ABOUT Today Recipy</div>
 </div>
     <div class="body"></div>
