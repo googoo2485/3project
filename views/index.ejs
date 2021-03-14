@@ -26,8 +26,11 @@
             </ul>
         </div>
         <ul class="Hbox" id="user">
-            <li><a href="./"><span><i class="fas fa-search"></i></span></a></li>
+            <li><a href="./" class="hboxIcon"><span><i class="fas fa-search"></i></span></a></li>
             <li class="dropdown">
+                <a href="./" >
+                    <i class="far fa-user"></i>           
+                </a>
                 <div class="dropdown-content">
                     <%if(data==undefined){%>
                         <a href="/register">회원가입
@@ -39,9 +42,7 @@
                         <a href="/logOut">로그아웃</a>
                     <%}%>
                 </div>
-                <a href="./" >
-                <i class="far fa-user"></i>           
-            </a></li>       
+                </li>       
             <li><a href="#a"class="menu"><span>메뉴</span></a></li>
         </ul>
     </div>
