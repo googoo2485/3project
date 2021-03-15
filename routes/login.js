@@ -22,9 +22,7 @@ router.post('/', (req, res) => {
     console.log(result)
     if (result == '') {
       res.send('<script>alert("없는 아이디 입니다.");</script>')
-    }
-    else if(req.session.loggedin){
-    res.redirect('/');
+    
     }else {
       req.session.loggedin = true;
       req.session.userId = result[0].id;

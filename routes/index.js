@@ -7,7 +7,6 @@ router.use(session)
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  console.log(req.session.userId)
   res.render('index',{data:req.session.userId});
 });
 
