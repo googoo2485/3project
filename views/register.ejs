@@ -2,6 +2,8 @@
     <head>
         <title>로그인/회원가입</title>
         <link rel="stylesheet" href="stylesheets/register.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="/javascripts/register.js"></script>
     </head>
     <body>
         <div class="wrap">
@@ -31,8 +33,9 @@
                     <input type="email" id="user-email" name="email" class="input-field" placeholder="Your Email" required>
                     <div class="emailCheck"></div>
                     <input type="password" id="user-pw" name="pw" class="input-field" placeholder="Enter Password" required>
-                    <input type="password" id="user-repw" name="re_pw" class="input-field" placeholder="Enter re-Password" required>
                     <div class="pwCheck"></div>
+                    <input type="password" id="user-repw" name="re_pw" class="input-field" placeholder="Enter re-Password" required>
+                    <div class="repwCheck"></div>
                     
                     <input type="checkbox" class="checkbox"><span>Terms and conditions</span>
                     <button class="submit" type="submit">REGISTER</button>
@@ -57,7 +60,7 @@
                 z.style.left = "110px";
             }
         </script>
-    <script src="javascripts/login.js"></script>
+    
 
     </body>
 </html> 
