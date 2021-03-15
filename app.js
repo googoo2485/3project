@@ -10,6 +10,8 @@ const registerRouter = require('./routes/register');
 const loginRouter = require('./routes/login');
 const myPageRouter = require('./routes/myPage');
 const logOutRouter = require('./routes/logOut');
+//const boardRouter = require('./routes/board');
+
 let app = express();
 
 
@@ -32,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // })
 app.use('/', indexRouter);
+//app.use('/board',boardRouter)
 app.use('/logOut',logOutRouter);
 app.use('/register', registerRouter);
 app.use('/login', loginRouter);

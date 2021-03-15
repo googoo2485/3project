@@ -53,7 +53,7 @@ router.post('/checkId', (req, res) =>{
 
 // router.post('/', (req, res) => {
 //   const body = req.body;
-//   let sql = "SELECT * FROM user where id=? and pw=?";
+//   let sql = "SELECT * FROM user where id=? and pw=?;";
 //   client.query(sql, [body.id, body.pw], (err, result) => {
 //     console.log(result)
 //     if (result == '') {

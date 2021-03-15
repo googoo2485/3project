@@ -5,6 +5,7 @@ const client = mysql.createConnection({
     password: 'rntmf147.@',
     database: 'tkdrn2485',
     port: '3306',
+    multipleStatements : true,
 });
 
 
