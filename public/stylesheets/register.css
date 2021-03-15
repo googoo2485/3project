@@ -4,7 +4,7 @@
     font-family: sans-serif;
 }
 @font-face{
-    font-family: 'sans-serif';src:url(../font/SansSerif.ttf)
+    font-family: 'sans-serif';src:url(/font/SansSerif.ttf)
 }
 .wrap {
     height: 100%;

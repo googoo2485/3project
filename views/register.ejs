@@ -24,11 +24,14 @@
                     <button class="submit">Login</button>
                 </form>
                 <form id="register" action="/register" method="POST" class="input-group">
-                    <input type="text" name="id" class="input-field" placeholder="User name" required>
+                    <input type="text" id="user_id" name="id" class="input-field" placeholder="User id" required>
                     <div class="loginCheck"></div>
-                    <input type="email" name="email" class="input-field" placeholder="Your Email" required>
-                    <input type="password" name="pw" class="input-field" placeholder="Enter Password" required>
-                    <input type="password" name="re_pw" class="input-field" placeholder="Enter Password" required>
+                    <input type="text" id="user_name" name="name" class="input-field" placeholder="User name" required>
+                    <div class="nameCheck"></div>
+                    <input type="email" id="user-email" name="email" class="input-field" placeholder="Your Email" required>
+                    <div class="emailCheck"></div>
+                    <input type="password" id="user-pw" name="pw" class="input-field" placeholder="Enter Password" required>
+                    <input type="password" id="user-repw" name="re_pw" class="input-field" placeholder="Enter re-Password" required>
                     <div class="pwCheck"></div>
                     
                     <input type="checkbox" class="checkbox"><span>Terms and conditions</span>
