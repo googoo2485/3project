@@ -31,7 +31,29 @@ router.post('/', (req, res) => {
       })
     }
   })
-
-
 });
+
+router.post('/checkID', (req, res) => {
+  let inp_id = req.body.data;
+
+  client.query('use tkdrn2485',()=>{
+      console.log("데이터베이스 사용");
+  });
+
+  client.query('SELECT * FROM user WHERE id=?', [inp_id], (err, sql_result) => {
+      console.error(err);
+      console.log('sql_result ==> ',sql_result);
+
+      if(sql_result == "") {
+          res.send({result: true});
+          console.log("사용 가능 ID");
+      }
+      else {
+          res.send({result: false});
+          console.log("사용 불가 ID");
+      }
+  });
+});
+
+
 module.exports = router;

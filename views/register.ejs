@@ -18,14 +18,19 @@
                 </div>
                 <form id="login" action="/login" method="POST" class="input-group">
                     <input type="text" class="input-field" placeholder="User name or Email" name="id" required>
+                    
                     <input type="password" class="input-field" placeholder="Enter Password" name="pw" required>
                     <input type="checkbox" class="checkbox"><span>Remember Password</span>
                     <button class="submit">Login</button>
                 </form>
                 <form id="register" action="/register" method="POST" class="input-group">
                     <input type="text" name="id" class="input-field" placeholder="User name" required>
+                    <div class="loginCheck"></div>
                     <input type="email" name="email" class="input-field" placeholder="Your Email" required>
                     <input type="password" name="pw" class="input-field" placeholder="Enter Password" required>
+                    <input type="password" name="re_pw" class="input-field" placeholder="Enter Password" required>
+                    <div class="pwCheck"></div>
+                    
                     <input type="checkbox" class="checkbox"><span>Terms and conditions</span>
                     <button class="submit" type="submit">REGISTER</button>
                 </form>
@@ -49,5 +54,7 @@
                 z.style.left = "110px";
             }
         </script>
+    <script src="javascripts/login.js"></script>
+
     </body>
 </html> 
