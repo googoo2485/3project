@@ -43,7 +43,7 @@ router.post('/', function (req, res) {
   console.log(sql);
   client.query(sql,[body.id ,body.pw ,body.email ,body.created],()=>{
     console.log('????')
-    res.render('index');
+    res.redirect('/');
   });
 });
 

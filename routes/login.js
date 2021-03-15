@@ -21,8 +21,7 @@ router.post('/', (req, res) => {
   client.query(sql, [body.id, body.pw], (err, result) => {
     console.log(result)
     if (result == '') {
-      res.send('<script>alert("없는 아이디 입니다.");</script>')
-    
+      res.send('<script>alert("없는 아이디 입니다.");</script>');
     }else {
       req.session.loggedin = true;
       req.session.userId = result[0].id;
