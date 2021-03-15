@@ -21,12 +21,7 @@ router.get('/', function(req, res, next) {
 //   }
 // }
 
-//client.connect();
-
-// let sql = "INSERT INTO user(id,pw,name,email,created)VALUSES(?,?,?,?,?)";
-// client.query(sql,(req,res)=>{
-// })
-
+client.connect();
 router.post('/', function (req, res) {
   let body = req.body;
   console.log(body);
