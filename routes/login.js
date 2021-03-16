@@ -4,7 +4,7 @@ const session = require('./session');
 const client = require('./mysql');
 const { connect } = require('./mysql');
 
-router.use(session)
+router.use(session);
 
 
 

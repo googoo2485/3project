@@ -1,8 +1,24 @@
-// const express = require('express');
-// const router = express.Router();
-// const session = require('./session');
-// const multer = require('multer');
-// router.use(session)
+const express = require('express');
+const router = express.Router();
+const session = require('./session');
+const multer = require('multer');
+const client = require('./mysql');
+router.use(session);
+
+
+client.connect();
+
+router.get('/', (req, res) => {
+    const body = req.body;
+    const sql = 'select * from board order by idx desc';
+
+    client.query(sql,(err,result)=>{
+        res.render('board',{
+            board:result,
+        })
+    });
+
+});
 
 
 
@@ -12,7 +28,7 @@
 // router.post('/', function(req, res, next) {
 //     res.send('test');
 //   });
-  
+
 // let upload = function (req, res) {
 //     let deferred = Q.defer();
 //     let storage = multer.diskStorage({
@@ -48,4 +64,4 @@
 //     res.send(500, err);
 //   });
 // });
-// module.exports = router;
+module.exports = router;

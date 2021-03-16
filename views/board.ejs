@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>board</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="/stylesheets/board.css">
+  <script src="https://kit.fontawesome.com/dc679029ff.js" crossorigin="anonymous"></script>
+  <title>Board</title>
 </head>
 <body>
-<div class="header">
-
-    
-</div>
-
-
-
-
-
-        <div class="body">
-            <%  %> 
-        </div>
-
-
-<div class="footer"></div>
-
+  <div class="header"></div>
+    <div class="body">
+      <% if(board==''){ %>
+        <div></div>
+        <% }else{ %>
+          <%board.forEach((item,index)=>{%>
+          <div class="list">
+            <div class="name"><%=item.name%></div>
+            <div class="title"><%=item.title%></div>
+            <div class="view">조회수<%=item.view%></div>
+            <div class="comment"><i class="far fa-comment"></i><%=item.comment%></div>
+            <div class="like"><i class="far fa-heart"></i><%=item.like%></div>
+          </div>
+          <!-- <i class="fas fa-heart"></i> 눌렀을때 하트 -->
+      <%})%>
+      <%}%>
+    </div>
+  </div>
 </body>
 </html>
